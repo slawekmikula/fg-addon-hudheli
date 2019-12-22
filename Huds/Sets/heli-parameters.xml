@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<!--
+$fgdata/Huds/Sets/heli-parameters.xml
+HeliHUD, an additional HUD system for FlightGear Flight Simualtor v1.0.0 
+and above.
+    Copyright (C) 2009  Alex D-HUND (alexARRbeggabaurSTOPde)
+
+This program is free software; you can redistribute it and/or modify it 
+under the terms of the GNU General Public License Version 2.0 (*not* 
+v2.2, v3.0 or whatever) as published by the Free Software Foundation.
+
+See the GNU General Public License in "COPYING.helihud" for more details.
+-->
+
+<PropertyList>
+	<tape>
+		<name>Airspeed nm</name>
+		<x>353</x>
+		<y>-220</y>
+		<width>28</width>
+		<height>150</height>
+		<option>right</option>
+		<option>vertical</option>
+		<major-divisions>10</major-divisions>
+		<minor-divisions>5</minor-divisions>
+		<display-span>50.0</display-span>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>true</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+		<input>
+			<property>/velocities/airspeed-kt</property>
+			<min>0.0</min>
+		</input>
+	</tape>
+
+	<label>
+		<name>km/h _km/h_</name>
+		<x>361</x>
+		<y>-64</y>
+		<width>1</width>
+		<height>1</height>
+		<format>km/h</format>
+		<halign>left</halign>
+	</label>
+	<label>
+		<name>km/h</name>
+		<x>381.5</x>
+		<y>-57</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/velocities/airspeed-kt</property>
+			<factor>1.852</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%5.0f</format>
+		<halign>right</halign>
+	</label>
+
+	<tape>
+		<name>RadioAltimeter</name>
+		<x>293</x>
+		<y>-220</y>
+		<width>25</width>
+		<height>150</height>
+		<option>left</option>
+		<option>vertical</option>
+		<major-divisions>25</major-divisions>
+		<minor-divisions>5</minor-divisions>
+		<display-span>100.0</display-span>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>true</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+		<input>
+			<property>/position/altitude-agl-ft</property>
+			<min>0.0</min>
+		</input>
+		<condition>
+			<less-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>1000000</value>
+			</less-than>
+		</condition>
+	</tape>
+
+	<tape>
+		<name>Vertical speed</name>
+		<x>-260</x>
+		<y>-220</y>
+		<width>20</width>
+		<height>120</height>
+		<option>left</option>
+		<option>vertical</option>
+		<major-divisions>1</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<display-span>10</display-span>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>true</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+		<input>
+			<property>/velocities/vertical-speed-fps</property>
+		</input>
+	</tape>
+
+<!-- Horizontal velocity indicator GSI -->
+<!--
+	<gauge>
+		<name>Velocity_sideward_right-a</name>
+		<x>-280</x>
+		<y>-165</y>
+		<width>100</width>
+		<height>15</height>
+		<option>notext</option>
+		<option>bottom</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>true</tick-right>
+		<tick-left>true</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>true</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/instrumentation/gsdi/drift-v-kt</property>
+			<max>20</max>
+			<min>-20</min>
+		</input>
+		<condition>
+			<property>/instrumentation/gsdi/drift-v-kt</property>
+		</condition>
+	</gauge>
+	<gauge>
+		<name>Velocity_sideward_right-b</name>
+		<x>-280</x>
+		<y>-150</y>
+		<width>100</width>
+		<height>15</height>
+		<option>notext</option>
+		<option>top</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>true</tick-right>
+		<tick-left>true</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>true</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/instrumentation/gsdi/drift-v-kt</property>
+			<max>20</max>
+			<min>-20</min>
+		</input>
+		<condition>
+			<property>/instrumentation/gsdi/drift-v-kt</property>
+		</condition>
+	</gauge>
+
+	<gauge>
+		<name>Velocity_forward-a</name>
+		<x>-230</x>
+		<y>-200</y>
+		<width>15</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>right</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<marker-offset>0.0</marker-offset>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>true</cap-left>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/instrumentation/gsdi/drift-u-kt</property>
+			<max>20</max>
+			<min>-20</min>
+		</input>
+		<condition>
+			<property>/instrumentation/gsdi/drift-u-kt</property>
+		</condition>
+	</gauge>
+	<gauge>
+		<name>Velocity_forward-b</name>
+		<x>-245</x>
+		<y>-200</y>
+		<width>15</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>left</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<marker-offset>0.0</marker-offset>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>true</cap-left>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/instrumentation/gsdi/drift-u-kt</property>
+			<max>20</max>
+			<min>-20</min>
+		</input>
+		<condition>
+			<property>/instrumentation/gsdi/drift-u-kt</property>
+		</condition>
+	</gauge>
+-->
+
+<!-- Engine RPM -->
+	<label>
+		<name>Enigne rpm _Engine_</name>
+		<x>195</x>
+		<y>-155</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Engine  rpm  x100</format>
+		<halign>left</halign>
+		<condition>
+			<property>/engines/engine/rpm</property>
+		</condition>
+	</label>
+	<label>
+		<name>Engine 4 rpm</name>
+		<x>211</x>
+		<y>-164</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/engines/engine[3]/rpm</property>
+			<factor>0.01</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%6.1f</format>
+		<halign>right</halign>
+		<condition>
+			<property>/engines/engine[3]/rpm</property>
+		</condition>
+	</label>
+	<label>
+		<name>Engine 3 rpm</name>
+		<x>233</x>
+		<y>-164</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/engines/engine[2]/rpm</property>
+			<factor>0.01</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%6.1f</format>
+		<halign>right</halign>
+		<condition>
+			<property>/engines/engine[2]/rpm</property>
+		</condition>
+	</label>
+	<label>
+		<name>Engine 2 rpm</name>
+		<x>254</x>
+		<y>-164</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/engines/engine[1]/rpm</property>
+			<factor>0.01</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%6.1f</format>
+		<halign>right</halign>
+		<condition>
+			<property>/engines/engine[1]/rpm</property>
+		</condition>
+	</label>
+	<label>
+		<name>Engine 1 rpm</name>
+		<x>277</x>
+		<y>-164</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/engines/engine/rpm</property>
+			<factor>0.01</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%6.1f</format>
+		<halign>right</halign>
+		<condition>
+			<property>/engines/engine/rpm</property>
+		</condition>
+	</label>
+
+<!-- Rotor RPM -->
+	<label>
+		<name>Rotor rpm _Rotor_</name>
+		<x>195</x>
+		<y>-145</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Rotor  rpm</format>
+		<halign>left</halign>
+		<condition>
+			<property>/rotors/main/rpm</property>
+		</condition>
+	</label>
+	<label>
+		<name>Rotor rpm</name>
+		<x>277</x>
+		<y>-144</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/rotors/main/rpm</property>
+			<factor>1</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%6.0f</format>
+		<halign>right</halign>
+		<condition>
+			<property>/rotors/main/rpm</property>
+		</condition>
+	</label>
+
+<!-- Engine Condition -->
+	<label>
+		<name>Engine Condition Label</name>
+		<x>195</x>
+		<y>-193</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Condition</format>
+		<halign>left</halign>
+		<condition>
+         <and>
+			   <or>
+				   <less-than>
+					   <property>/controls/engines/engine/condition</property>
+					   <value>1</value>
+				   </less-than>
+			      <less-than>
+					   <property>/controls/engines/engine[1]/condition</property>
+					   <value>0</value>
+				   </less-than>
+			   </or>
+			   <or>
+				   <less-than>
+					   <property>/controls/engines/engine/condition</property>
+					   <value>1</value>
+				   </less-than>
+			      <less-than>
+					   <property>/controls/engines/engine[1]/condition</property>
+					   <value>0</value>
+				   </less-than>
+			   </or>
+         </and>
+		</condition>
+	</label>
+	<label>
+		<name>Engine Condition 1</name>
+		<x>257</x>
+		<y>-193</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/controls/engines/engine/condition</property>
+			<factor>100</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%3.0f</format>
+		<halign>right</halign>
+		<condition>
+			<less-than>
+				<property>/controls/engines/engine/condition</property>
+				<value>1</value>
+			</less-than>
+		</condition>
+	</label>
+	<label>
+		<name>Engine Condition 2</name>
+		<x>277</x>
+		<y>-193</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/controls/engines/engine[1]/condition</property>
+			<factor>100</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%3.0f</format>
+		<halign>right</halign>
+		<condition>
+			<less-than>
+				<property>/controls/engines/engine[1]/condition</property>
+				<value>1</value>
+			</less-than>
+		</condition>
+	</label>
+
+
+<!--
+	<ladder>
+		<name>Horizon line</name>
+		<x>-300</x>
+		<y>135</y>
+		<width>620</width>
+		<height>40</height>
+		<option>notext</option>
+		<pitch-input>
+			<property>/orientation/pitch-deg</property>
+		</pitch-input>
+		<roll-input>
+			<property>/orientation/roll-deg</property>
+		</roll-input>
+		<display-span>600</display-span>
+		<divisions>25</divisions>
+		<screen-hole>570</screen-hole>
+		<compression-factor>10</compression-factor>
+		<enable-drift-marker>false</enable-drift-marker>
+		<enable-fuselage-ref-line>false</enable-fuselage-ref-line>
+		<type>pitch</type>  
+	</ladder>
+-->
+<!--
+enable-target-spot
+enable-velocity-vector
+    enable-alpha-bracket
+    enable-energy-marker
+    enable-waypoint-marker
+    enable-zenith
+    enable-nadir
+    enable-hat
+    enable-climb-dive-marker
+    enable-glide-slope-marker
+    glide-slope
+-->
+
+</PropertyList>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<!--
+$fgdata/Huds/Instruments/compass-dual.xml
+HeliHUD, an additional HUD system for FlightGear Flight Simualtor v1.0.0 
+and above.
+    Copyright (C) 2009-2013  Alex D-HUND (gfreaks.fgfsARRRgmxSTOPde)
+
+This program is free software; you can redistribute it and/or modify it 
+under the terms of the GNU General Public License Version 2.0 (*not* 
+v2.2, v3.0 or whatever) as published by the Free Software Foundation.
+
+See the GNU General Public License in "COPYING.helihud" for more details.
+-->
+
+<PropertyList>
+
+	<tape>
+		<name>Gyrocompass</name>
+		<x>-100</x>
+		<width>200</width>
+		<height>28</height>
+		<input>
+			<property>/orientation/heading-deg</property>
+		</input>
+		<display-span>50.0</display-span>
+		<modulo>360</modulo>
+		<option>top</option>
+		<major-divisions>10</major-divisions>
+		<minor-divisions>2</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>true</tick-right>
+		<tick-left>true</tick-left>
+		<cap-bottom>true</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>variable</tick-length>
+	</tape>
+
+   <gauge>
+		<name>Compass</name>
+		<x>-100</x>
+		<width>200</width>
+		<height>20</height>
+		<option>top</option>
+		<option>notext</option>
+		<major-divisions>25</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>true</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.0</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/environment/magnetic-variation-deg</property>
+			<factor>-1</factor>
+			<max>25</max>
+			<min>-25</min>
+		</input>
+   </gauge>
+
+</PropertyList>

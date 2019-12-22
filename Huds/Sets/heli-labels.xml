@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<!--
+$fgdata/Huds/Sets/heli-labels.xml
+HeliHUD, an additional HUD system for FlightGear Flight Simualtor v1.0.0 
+and above.
+    Copyright (C) 2009  Alex D-HUND (alexARRbeggabaurSTOPde)
+
+This program is free software; you can redistribute it and/or modify it 
+under the terms of the GNU General Public License Version 2.0 (*not* 
+v2.2, v3.0 or whatever) as published by the Free Software Foundation.
+
+See the GNU General Public License in "COPYING.helihud" for more details.
+-->
+
+<PropertyList>
+
+<!--	<label>
+		<name>test</name>
+		<x>95</x>
+		<y>95</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/position/altitude-ft</property>
+			<factor>1</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%5.3f ft</format>
+		<prefix>Altest</prefix>
+		<halign>left</halign>
+	</label>
+-->
+
+<!-- Tailwheel unlocked -->
+	<label>
+		<name>Tailwheel lock</name>
+		<x>0</x>
+		<y>27</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Tail unlock</format>
+		<halign>left</halign>
+		<condition>
+			<not>
+				<property>/controls/gear/tailwheel-lock</property>
+			</not>
+		</condition>
+	</label>
+
+<!-- Hook and Gear "down" -->
+<label>
+		<name>Gear, Hook _down_</name>
+		<x>220</x>
+		<y>27</y>
+		<width>1</width>
+		<height>1</height>
+		<format>down</format>
+		<halign>left</halign>
+		<condition>
+			<or>
+				<property>/controls/gear/gear-down</property>
+				<property>/controls/gear/tailhook</property>
+			</or>	
+		</condition>
+	</label>
+
+<!-- Hook down -->
+	<label>
+		<name>Hook</name>
+		<x>162</x>
+		<y>27</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Hook-</format>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/gear/tailhook</property>
+		</condition>
+	</label>
+
+<!-- Gear down -->
+	<label>
+		<condition>
+			<property>/controls/gear/gear-down</property>
+		</condition>
+		<name>Gear</name>
+		<x>192</x>
+		<y>27</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Gear-</format>
+		<halign>left</halign>
+	</label>
+
+<!-- "Brakes:" label -->
+	<label>
+		<name>Brakes set</name>
+		<x>0</x>
+		<y>14</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Brakes:</format>
+		<halign>left</halign>
+		<condition>
+			<or>
+				<property>/controls/gear/brake-parking</property>
+				<property>/controls/rotor/brake</property>
+				<property>/controls/flight/speedbrake</property>
+			</or>
+		</condition>
+	</label>
+
+<!-- Parking brakes set -->
+	<label>
+		<name>Parking brake</name>
+		<x>43</x>
+		<y>13</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Parking</format>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/gear/brake-parking</property>
+		</condition>
+	</label>
+
+<!-- Rotor brake set -->
+	<label>
+		<name>Rotorbrake</name>
+		<x>185</x>
+		<y>14</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Rotor</format>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/rotor/brake</property>
+		</condition>
+	</label>
+
+<!-- Speed brakes set -->
+	<label>
+		<name>Speedbrake</name>
+		<x>215</x>
+		<y>13.7</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Speed</format>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/flight/speedbrake</property>
+		</condition>
+	</label>
+
+<!-- Flap indicator -->
+	<label>
+		<name>Flaps</name>
+		<x>0</x>
+		<y>0</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/controls/flight/flaps</property>
+			<factor>100</factor>
+		</input>
+		<format>%3.0f</format>
+		<prefix>Flaps</prefix>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/flight/flaps</property>
+		</condition>
+	</label>
+
+<!-- Spoiler set -->
+	<label>
+		<name>Spoiler</name>
+		<x>147</x>
+		<y>0</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/controls/flight/spoilers</property>
+			<factor>100</factor>
+		</input>
+		<format>%3.0f</format>
+		<prefix>Spoiler</prefix>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/flight/spoilers</property>
+		</condition>
+	</label>
+
+<!-- Reverser set -->
+	<label>
+		<name>Reverser</name>
+		<x>204</x>
+		<y>0.7</y>
+		<width>1</width>
+		<height>1</height>
+		<format>Reverser</format>
+		<halign>left</halign>
+		<condition>
+			<property>/controls/engines/engine/reverser</property>
+		</condition>
+	</label>
+
+</PropertyList>

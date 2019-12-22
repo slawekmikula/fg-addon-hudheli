@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+$fgdata/Huds/heli-lil.xml
+HeliHUD, an additional HUD system for FlightGear Flight Simualtor v1.0.0
+and above.
+    Copyright (C) 2009  Alex D-HUND (alexARRbeggabaurSTOPde)
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License Version 2.0 (*not*
+v2.2, v3.0 or whatever) as published by the Free Software Foundation.
+
+See the GNU General Public License in "COPYING.helihud" for more details.
+-->
+
+<PropertyList>
+	<name>little Heli-HUD</name>
+	<enable3d>false</enable3d>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/compass-dual.xml</path>
+		<y-offset>190</y-offset>
+	</import>
+
+   <import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/AMSL-label-2.xml</path>
+		<x-offset>-290</x-offset>
+		<y-offset>150</y-offset>
+	</import>
+
+	<import>
+		<path>Huds/Sets/autopilot.xml</path>
+		<x-offset>-90</x-offset>
+		<y-offset>170</y-offset>
+	</import>
+   <import>
+		<path>Huds/Sets/gps.xml</path>
+		<x-offset>-290</x-offset>
+		<y-offset>193</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-labels.xml</path>
+		<x-offset>-290</x-offset>
+		<y-offset>108</y-offset>
+	</import>
+
+</PropertyList>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<!-- Altitude -->
+	<label>
+		<name>AMSL</name>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/position/altitude-ft</property>
+			<factor>1</factor>
+			<damp>0.0</damp>
+		</input>
+		<format>%7.0lf ft</format>
+		<halign>right</halign>
+	</label>
+</PropertyList>

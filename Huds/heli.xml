@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+$fgdata/Huds/heli.xml
+HeliHUD, an additional HUD system for FlightGear Flight Simualtor v1.0.0
+and above.
+    Copyright (C) 2009 - 2013  Alex D-HUND (gfreaks.fgfsARRgmxSTOPde)
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License Version 2.0 (*not*
+v2.2, v3.0 or whatever) as published by the Free Software Foundation.
+
+See the GNU General Public License in "COPYING.helihud" for more details.
+-->
+
+<PropertyList>
+	<name>Heli-HUD</name>
+	<enable3d>false</enable3d>
+
+	<import>
+		<path>Huds/Sets/autopilot.xml</path>
+		<x-offset>-190</x-offset>
+		<y-offset>170</y-offset>
+	</import>
+
+    <import>
+		<path>Huds/Sets/gps.xml</path>
+		<x-offset>-400</x-offset>
+		<y-offset>160</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/compass-dual.xml</path>
+		<y-offset>190</y-offset>
+	</import>
+
+	<import>
+		<path>Huds/Instruments/gload.xml</path>
+		<x-offset>291.5</x-offset>
+		<y-offset>-64</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/AMSL-label-1.xml</path>
+		<x-offset>319</x-offset>
+		<y-offset>-64.3</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/wind-label.xml</path>
+		<x-offset>195</x-offset>
+		<y-offset>-204</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/clock-label.xml</path>
+		<x-offset>195</x-offset>
+		<y-offset>-213</y-offset>
+	</import>
+
+	<import>
+		<path>Huds/Instruments/turn-bank-indicator.xml</path>
+		<y-offset>-215</y-offset>
+	</import>
+
+	<import>
+		<path>Huds/Sets/coordinates.xml</path>
+		<y-offset>190</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-controls.xml</path>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-labels.xml</path>
+		<x-offset>-382</x-offset>
+		<y-offset>-90</y-offset>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-parameters.xml</path>
+	</import>
+
+	<import>
+		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-particular.xml</path>
+	</import>
+
+
+</PropertyList>

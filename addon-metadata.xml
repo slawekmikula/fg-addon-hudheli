@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <meta>
+    <file-type type="string">FlightGear add-on metadata</file-type>
+    <format-version type="int">1</format-version>
+  </meta>
+
+  <addon>
+    <identifier type="string">com.slawekmikula.flightgear.HudHeli</identifier>
+    <name type="string">HUD Heli</name>
+    <version type="string">1.0.0</version>
+
+    <authors>
+      <author>
+        <name type="string">Alex D-HUND</name>
+        <email type="string"> alexARRbeggabaurSTOPde</email>
+        <url type="string"></url>
+      </author>
+      <author>
+        <name type="string">slawekmikula from the FlightGear forum</name>
+        <email type="string"></email>
+        <url type="string"></url>
+      </author>
+    </authors>
+
+    <short-description type="string">
+      Replaces default HUD with Helicopter HUD
+    </short-description>
+
+    <long-description type="string">
+      Additional HUD with information needed for Helicopter control. Especially
+      useful is the stick position interface. Encapsulation for addon of HUD
+      created by http://wiki.beggabaur.rocks/ya/HeliHUD
+    </long-description>
+
+    <license>
+      <designation type="string">
+        GNU GPL version 2 or later
+      </designation>
+
+      <file type="string">
+        LICENSE
+      </file>
+
+      <url type="string">
+        https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+      </url>
+    </license>
+
+    <min-FG-version type="string">2018.3.0</min-FG-version>
+    <max-FG-version type="string">none</max-FG-version>
+
+    <urls>
+      <home-page type="string">
+        <![CDATA[ https://forum.flightgear.org/viewtopic.php?f=0&t=0 ]]>
+      </home-page>
+
+      <download type="string">
+        https://github.com/slawekmikula/fg-addon-hudheli/download
+      </download>
+
+      <support type="string">
+        http://wiki.flightgear.org/addon-hudheli
+      </support>
+
+      <code-repository type="string">
+        https://github.com/slawekmikula/fg-addon-hudheli
+      </code-repository>
+    </urls>
+
+    <tags>
+      <tag type="string">hud</tag>
+      <tag type="string">helicopter</tag>
+    </tags>
+  </addon>
+</PropertyList>
