@@ -9,7 +9,7 @@ version is located in 'contrib' directory.
 
 - extract zip (if downloaded as a zip) to a given location. For example let's
   say we have /myfolder/addons/thisaddon with contents of this addon.
-- run flightgear with --addon directive or add it in the Launcher application
+- run flightgear with --addon directive **OR** add it in the Launcher application
   in 'Add-On' section.
 
 Code:
@@ -17,11 +17,20 @@ Code:
     ./fgbin/bin/fgfs --fg-root=./fgdata --launcher --prop:/sim/fg-home=/myfolder/flightgear/fghome --addon="/myfolder/addons/thisaddon"
 ```
 
+![alt addon adding](doc/screens/add_addon.png "Adding addon")
+
+
 # Configuration
 
-After starting up, it replaces default HUD (HUD order). When you press 'H' first
-time the heli HUD appears. You can change HUD's with 'I' button. Hud color can
-be changed with
+After starting up, it replaces default HUD (HUD order). When you press 'h' first
+time the heli HUD appears. Pressing 'h' again will change HUD color. You can change
+HUD's layout with 'I' button. Order of HUDS provided by the addon:
+
+- HUD Heli
+- HUD Lil (little)
+- Default
+- NTPS
+- minimal
 
 # History
 
@@ -30,7 +39,7 @@ be changed with
 
 # Authors
 
-- Slawek Mikula - addon source code
+- Slawek Mikula - addon source code and packaging
 - Alex D-HUND - main source code
 
 # Links
