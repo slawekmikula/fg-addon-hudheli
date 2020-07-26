@@ -17,12 +17,12 @@ See the GNU General Public License in "COPYING.helihud" for more details.
 	<enable3d>false</enable3d>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/compass-dual.xml</path>
+		<path>Huds/Instruments/compass-dual.xml</path>
 		<y-offset>190</y-offset>
 	</import>
 
    <import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/AMSL-label-2.xml</path>
+		<path>Huds/Instruments/AMSL-label-2.xml</path>
 		<x-offset>-290</x-offset>
 		<y-offset>150</y-offset>
 	</import>
@@ -39,7 +39,7 @@ See the GNU General Public License in "COPYING.helihud" for more details.
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-labels.xml</path>
+		<path>Huds/Sets/heli-labels.xml</path>
 		<x-offset>-290</x-offset>
 		<y-offset>108</y-offset>
 	</import>

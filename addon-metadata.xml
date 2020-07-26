@@ -34,6 +34,20 @@
       created by http://wiki.beggabaur.rocks/ya/HeliHUD
     </long-description>
 
+    <localized>
+      <pl>
+        <short-description type="string">
+          Zastępuje domyślną konfigurację widoku HUD z widokiem HUD dla helikoptera
+        </short-description>
+
+        <long-description type="string">
+          Dodatkowe informacje na wyświetlaczu HUD potrzebne dla kontroli helikoptera.
+          W szczególności przydatny interfejs pozycji wolantu. Obudowanie w interfejs
+          rozszerzenia wyświetlacza HUD utworzonego przez http://wiki.beggabaur.rocks/ya/HeliHUD
+        </long-description>
+      </pl>
+    </localized>
+
     <license>
       <designation type="string">
         GNU GPL version 2 or later
@@ -61,7 +75,7 @@
       </download>
 
       <support type="string">
-          https://forum.flightgear.org
+        https://github.com/slawekmikula/fg-addon-hudheli/issues
       </support>
 
       <code-repository type="string">

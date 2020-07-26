@@ -29,7 +29,7 @@ See the GNU General Public License in "COPYING.helihud" for more details.
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/compass-dual.xml</path>
+		<path>Huds/Instruments/compass-dual.xml</path>
 		<y-offset>190</y-offset>
 	</import>
 
@@ -40,19 +40,19 @@ See the GNU General Public License in "COPYING.helihud" for more details.
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/AMSL-label-1.xml</path>
+		<path>Huds/Instruments/AMSL-label-1.xml</path>
 		<x-offset>319</x-offset>
 		<y-offset>-64.3</y-offset>
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/wind-label.xml</path>
+		<path>Huds/Instruments/wind-label.xml</path>
 		<x-offset>195</x-offset>
 		<y-offset>-204</y-offset>
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Instruments/clock-label.xml</path>
+		<path>Huds/Instruments/clock-label.xml</path>
 		<x-offset>195</x-offset>
 		<y-offset>-213</y-offset>
 	</import>
@@ -68,21 +68,21 @@ See the GNU General Public License in "COPYING.helihud" for more details.
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-controls.xml</path>
+		<path>Huds/Sets/heli-controls.xml</path>
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-labels.xml</path>
+		<path>Huds/Sets/heli-labels.xml</path>
 		<x-offset>-382</x-offset>
 		<y-offset>-90</y-offset>
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-parameters.xml</path>
+		<path>Huds/Sets/heli-parameters.xml</path>
 	</import>
 
 	<import>
-		<path>[addon=com.slawekmikula.flightgear.HudHeli]Huds/Sets/heli-particular.xml</path>
+		<path>Huds/Sets/heli-particular.xml</path>
 	</import>
 
 
