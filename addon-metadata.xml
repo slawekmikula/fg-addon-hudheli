@@ -1,91 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-  <meta>
-    <file-type type="string">FlightGear add-on metadata</file-type>
-    <format-version type="int">1</format-version>
-  </meta>
+    <meta>
+        <file-type type="string">FlightGear add-on metadata</file-type>
+        <format-version type="int">1</format-version>
+    </meta>
 
-  <addon>
-    <identifier type="string">com.slawekmikula.flightgear.HudHeli</identifier>
-    <name type="string">HUD Heli</name>
-    <version type="string">0.0.2</version>
+    <addon>
+        <identifier type="string">com.slawekmikula.flightgear.HudHeli</identifier>
+        <name type="string">HUD Heli</name>
+        <version type="string">0.0.3</version>
 
-    <authors>
-      <author>
-        <name type="string">Alex D-HUND</name>
-        <email type="string">alexARRbeggabaurSTOPde</email>
-        <url type="string"></url>
-      </author>
-      <author>
-        <name type="string">slawekmikula from the FlightGear forum</name>
-        <email type="string"></email>
-        <url type="string"></url>
-      </author>
-    </authors>
+        <authors>
+            <author>
+                <name type="string">Alex D-HUND</name>
+                <email type="string">alexARRbeggabaurSTOPde</email>
+                <url type="string"></url>
+            </author>
+            <author>
+                <name type="string">slawekmikula from the FlightGear forum</name>
+                <email type="string">slawek.mikula@gmail.com</email>
+                <url type="string"></url>
+            </author>
+        </authors>
 
-    <short-description type="string">
-      Replaces default HUD with a Helicopter HUD
-    </short-description>
+        <maintainers>
+            <maintainer>
+                <name type="string">slawekmikula from the FlightGear forum</name>
+                <email type="string">slawek.mikula@gmail.com</email>
+                <url type="string"></url>
+            </maintainer>
+        </maintainers>
 
-    <long-description type="string">
-      Additional HUD with information needed for Helicopter control. Especially
-      useful is the stick position interface. Encapsulation for add-on of HUD
-      created by http://wiki.beggabaur.rocks/ya/HeliHUD
-    </long-description>
 
-    <localized>
-      <pl>
-        <short-description type="string">
-          Zastępuje domyślną konfigurację widoku HUD z widokiem HUD dla helikoptera
-        </short-description>
+        <short-description type="string">Add additional Helicopter HUD's before the default ones</short-description>
+        <long-description type="string">Additional HUD with information needed for Helicopter control. Especially useful is the stick position interface. Encapsulation for add-on of HUD created by http://wiki.beggabaur.rocks/ya/HeliHUD</long-description>
 
-        <long-description type="string">
-          Dodatkowe informacje na wyświetlaczu HUD potrzebne dla kontroli helikoptera.
-          W szczególności przydatny interfejs pozycji wolantu. Obudowanie w interfejs
-          rozszerzenia wyświetlacza HUD utworzonego przez http://wiki.beggabaur.rocks/ya/HeliHUD
-        </long-description>
-      </pl>
-    </localized>
+        <localized>
+            <pl>
+                <short-description type="string">Dodaje dodatkowe widoki HUD dla helikopterów przez domyślnymi widokami</short-description>
+                <long-description type="string">Dodatkowe informacje na wyświetlaczu HUD potrzebne dla kontroli helikoptera. W szczególności przydatny interfejs pozycji wolantu. Obudowanie w interfejs rozszerzenia wyświetlacza HUD utworzonego przez http://wiki.beggabaur.rocks/ya/HeliHUD</long-description>
+            </pl>
+        </localized>
 
-    <license>
-      <designation type="string">
-        GNU GPL version 2 or later
-      </designation>
+        <license>
+            <designation type="string">GNU GPL version 2 or later</designation>
+            <file type="string">LICENSE</file>
+            <url type="string">https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</url>
+        </license>
 
-      <file type="string">
-        LICENSE
-      </file>
+        <min-FG-version type="string">2018.3.0</min-FG-version>
+        <max-FG-version type="string">none</max-FG-version>
 
-      <url type="string">
-        https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-      </url>
-    </license>
+        <urls>
+            <home-page type="string">http://wiki.flightgear.org/addon-hudheli</home-page>
+            <download type="string">https://github.com/slawekmikula/fg-addon-hudheli/download</download>
+            <support type="string">https://github.com/slawekmikula/fg-addon-hudheli/issues</support>
+            <code-repository type="string">https://github.com/slawekmikula/fg-addon-hudheli</code-repository>
+        </urls>
 
-    <min-FG-version type="string">2018.3.0</min-FG-version>
-    <max-FG-version type="string">none</max-FG-version>
-
-    <urls>
-      <home-page type="string">
-        http://wiki.flightgear.org/addon-hudheli
-      </home-page>
-
-      <download type="string">
-        https://github.com/slawekmikula/fg-addon-hudheli/download
-      </download>
-
-      <support type="string">
-        https://github.com/slawekmikula/fg-addon-hudheli/issues
-      </support>
-
-      <code-repository type="string">
-        https://github.com/slawekmikula/fg-addon-hudheli
-      </code-repository>
-    </urls>
-
-    <tags>
-      <tag type="string">hud</tag>
-      <tag type="string">helicopter</tag>
-    </tags>
-  </addon>
+        <tags>
+            <tag type="string">hud</tag>
+            <tag type="string">helicopter</tag>
+        </tags>
+    </addon>
 </PropertyList>
